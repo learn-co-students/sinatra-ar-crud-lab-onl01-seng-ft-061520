@@ -1,0 +1,9 @@
+<h1>Article Library</h1>
+
+<% @articles.each_with_index do |a, index| %>
+  <h2>Article <%= index +1 %></h2>
+  <div class="article">
+    <h4>Name: <%= a.title %></h4>
+    <p>Content: <%= a.content %></p>
+  </div><br>
+<% end %>
