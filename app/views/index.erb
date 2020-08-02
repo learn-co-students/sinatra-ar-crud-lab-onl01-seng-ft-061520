@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<h1>Available Articles: </h1>
+<% @articles.each do |article| %>
+<h2>ID: <%= article.id %></h2>
+<h2>Title: <%= article.title %></h2>
+<% end  %>

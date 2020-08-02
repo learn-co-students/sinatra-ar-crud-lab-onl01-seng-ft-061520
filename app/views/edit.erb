@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<% title = @article.title %>
+<% content = @article.content %>
+<h1>Please make your edits</h1>
+
+<form class="" action=<%= '/articles/' + @article.id.to_s %> method="post">
+  <h2 name="id">Id: <%= @article.id  %></h2>
+  <h2>Current Title: <%= @article.title %></h2>
+  <label for="title">Article Title: </label>
+  <input type="text" name="title" placeholder="new title">
+  <h2>Current Content: <%= @article.content %></h2>
+  <label for="content">Article Content: </label>
+  <input type="content" name="content" placeholder="new content">
+  <input type="submit" name="submit" id="submit">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+</form>
