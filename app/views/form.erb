@@ -1,0 +1,15 @@
+<h1>New Article: </h1>
+
+<form action="<%=@article.new_record? ? "/articles" : "/articles/#{@article.id}"%>" method="post">
+<% if @article.persisted?%>
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <%end%>
+
+<label for='article_title'>Title:</label>
+<input type='text' name='article[title]' id='title' value="<%= @article.title %>">
+
+<label for='article_content'>Content:</label>
+<input type='text' name='article[content]' id='content' value="<%= @article.content %>">
+<br>
+<input type='submit' id='submit' value='submit'>
+</form>
