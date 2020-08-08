@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit <%=@article.name%></h1>
+    <form class="article" action="/articles/<%=@article.id%>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="name" value="<%=@article.name%>">
+      <label for="content">Content:</label>
+      <textarea id="content" name="content" rows="20" cols="80"><%=@post.content%></textarea>
+      <input id="submit" type="submit" name="submit" value="Submit">
+    </form>
+    <form class="delete" action="/articles/<%=@articles.id%>/delete" method="post">
+      <input id="hidden_delete" type="hidden" name="_method" value="delete">
+      <input id="delete" type="submit" name="delete" value="Delete">
+    </form>
+  </body>
+</html>

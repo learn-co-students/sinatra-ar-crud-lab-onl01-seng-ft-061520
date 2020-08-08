@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Articles</h1>
+    <hr>
+    <%@articles.each do |p|%>
+    <p><%=p.id%></p>
+    <h5><%= p.name%></h5>
+    <!-- <p><%= p.content%></p>
+    <form class="delete" action="/articles/<%=p.id%>/delete" method="post">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input id="delete" type="submit" name="delete" value="Delete">
+    </form> -->
+    <hr>
+    <%end%>
+  </body>
+</html>
